@@ -1,0 +1,156 @@
+.vtimeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  margin-block-end: 20px;
+
+  &::before {
+    inset-block-start: 0;
+    inset-block-end: 0;
+    position: absolute;
+    content: " ";
+    width: 2px;
+    border-inline-start: 2px dotted #{$border};
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-wrapper {
+    display: block;
+    margin-block-end: 20px;
+    position: relative;
+    width: 100%;
+    padding-inline-end: 90px;
+
+    &::before {
+      content: " ";
+      display: table;
+    }
+
+    &::after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+
+    .timeline-badge {
+      width: 45px;
+      height: 45px;
+      background: #{$primary};
+      position: absolute;
+      inset-block-start: 16px;
+      inset-inline-start: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+      border: 0px solid rgb($white) ;
+      border-radius: 50%;
+      box-shadow: 0px 0px 0px 3px #{$gray-300} !important;
+  
+      i {
+        color: rgb($white) ;
+        text-align: center;
+        font-size: 25px;
+        line-height: 1.8;
+        display:flex;
+        justify-content: center;
+      }
+    }
+
+    .timeline-panel {
+        position: relative;
+        width: 35%;
+        padding: 20px;
+        background: $primary-01;
+        border-radius: 3px;
+        margin-inline-start: 15%;
+        box-shadow: none;
+        border-block-start: 2px solid #{$primary};
+
+        &::after {
+          content: " ";
+          position: absolute;
+          inset-block-start: 25px;
+          inset-inline-end: -14px;
+          display: inline-block;
+          border-block-start: 14px solid transparent;
+          border-inline-start: 14px solid $primary-01;
+          border-inline-end: 0 solid $primary-01;
+          border-block-end: 14px solid transparent;
+        }
+    }
+
+    &.timeline-inverted {
+      padding-inline-end: 0;
+      padding-inline-start: 90px;
+  
+      .timeline-panel {
+        margin-inline-start: auto;
+        margin-inline-end: 15%;
+  
+        &::after {
+          border-inline-start-width: 0;
+          border-inline-end-width: 14px;
+          inset-inline-start: -14px;
+          inset-inline-end: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:425px) and (max-width: 520px){
+	.vtimeline .timeline-wrapper .timeline-panel {
+		margin-inline-start: 20% !important;
+	}
+}
+
+@media (min-width:320px) and (max-width: 425px){
+	.vtimeline .timeline-wrapper .timeline-panel {
+		margin-inline-start: 30% !important;
+	}
+}
+
+@media (min-width:100px) and (max-width: 320px){
+	.vtimeline .timeline-wrapper .timeline-panel {
+		margin-inline-start: 29% !important;
+	}
+}
+
+@media (max-width: 992px) {
+
+  .vtimeline {
+    &::before {
+      inset-inline-start: 26px;
+    }
+
+    .timeline-wrapper {
+      padding-inline-end: 0;
+
+      .timeline-badge {
+        inset-inline-start: 26px;
+      }
+
+      .timeline-panel {
+        width: auto;
+        margin-inline-start: 15%;
+
+        &::after {
+          border-inline-end: 14px solid $primary-01;
+          border-inline-start: 0 solid $primary-01;
+          inset-inline-start: -14px;
+          inset-inline-end: auto;
+          inset-block-start:25px;
+        }
+      }
+
+      &.timeline-inverted {
+        padding-inline-start: 0;
+
+        .timeline-panel {
+          margin-inline-end: 0;
+          margin-inline-start: 15%;
+        }
+      }
+    }
+  }
+}

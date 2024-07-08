@@ -1,0 +1,195 @@
+.breadcrumb-header {
+  display: flex;
+  margin-block-start: 20px;
+  margin-block-end: 20px;
+  width: 100%;
+
+  .breadcrumb {
+    background: transparent !important;
+    padding: 0;
+    margin-block-end: 0;
+    font-size: 13px;
+  }
+}
+
+.breadcrumb-center {
+  ol {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 7px;
+  }
+
+  li {
+    display: contents;
+    text-align: center;
+  }
+}
+
+.breadcrumb-end {
+  ol {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: end;
+  }
+
+  li {
+    display: contents;
+    text-align: end;
+  }
+}
+
+@media (max-width: 633px) {
+  .breadcrumb-header {
+    display: block;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  margin-block-end: 1rem;
+  list-style: none;
+  border-radius: 7px;
+}
+
+.breadcrumb-item {
+  a {
+    color: #{$muted};
+  }
+
+  +.breadcrumb-item {
+
+    &::before {
+      display: inline-block;
+    }
+
+    &:hover::before {
+      text-decoration: underline;
+      text-decoration: none;
+    }
+  }
+
+  &.active {
+    color: #{$primary};
+  }
+}
+
+.breadcrumb-style1 .breadcrumb-item a {
+
+  &:hover,
+  &:focus {
+    color: #{$primary};
+  }
+}
+
+.main-content-breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #{$gray-500};
+  margin-block-end: 10px;
+
+  span {
+    position: relative;
+
+    +span::before {
+      content: '\f3d1';
+      font-family: 'Ionicons';
+      font-size: 12px;
+      font-weight: 300;
+      display: inline;
+      margin: 0 5px;
+      color:#{$gray-400};
+      line-height: 0;
+      position: relative;
+      inset-block-start: 1px;
+    }
+
+    &:last-child {
+      color: #{$gray-700};
+    }
+  }
+}
+
+.main-breadcrumbs {
+  padding: 0;
+  background-color: transparent;
+  margin-block-end: 0;
+
+  .breadcrumb-item {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-weight: 700;
+
+    a {
+      color: #{$default-color};
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: #{$gray-500};
+      }
+    }
+
+    &.active {
+      color: #{$primary};
+    }
+
+    +.breadcrumb-item {
+      padding-inline-start: 8px;
+
+      &::before {
+        color: #{$gray-500};
+        padding-inline-end: 8px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main-breadcrumbs .breadcrumb-item a {
+    transition: none;
+  }
+}
+
+.breadcrumb-style3 {
+  .breadcrumb-item+.breadcrumb-item::before {
+    float: none;
+    padding-inline-end: .5rem;
+    color: #8592a9;
+    content: var(--bs-breadcrumb-divider, "\e933");
+    font-family: 'feather' !important;
+  }
+
+  .breadcrumb-item a {
+    margin-inline-end: 5px;
+  }
+}
+
+.breadcrumb-style2 {
+  .breadcrumb-item+.breadcrumb-item::before {
+    float: none;
+    padding-inline-end: .5rem;
+    color: #8592a9;
+    content: var(--bs-breadcrumb-divider, "\f3d1");
+    font-family: 'Ionicons' !important;
+  }
+
+  .breadcrumb-item a {
+    margin-inline-end: 5px;
+  }
+}
+
+.breadcrumb-item+.breadcrumb-item {
+  display: inline-block;
+}

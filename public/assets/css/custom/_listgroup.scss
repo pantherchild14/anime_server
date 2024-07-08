@@ -1,0 +1,445 @@
+.list-group.custom-list-group {
+  .list-group-item {
+    margin-block-start: -1px;
+  }
+}
+
+.list-group-item-action {
+  color: #{$color};
+
+  &:hover,
+  &:focus {
+    background-color: #{$primary};
+    color: #{$fixed-black};
+  }
+
+  &:active {
+    color: #{$fixed-black};
+    background-color: #{$primary};
+  }
+}
+.list-group-item {
+  padding: 0.85rem 1.25rem;
+  border: 1px solid #{$border};
+
+  &:first-child {
+    border-start-start-radius: 3px;
+    border-start-end-radius: 3px;
+  }
+
+  &:last-child {
+    margin-block-end: 0;
+    border-end-end-radius: 3px;
+    border-end-start-radius: 3px;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: #{$gray-600};
+  }
+
+  &.active {
+    background-color: #{$primary};
+    border-color: #{$primary} !important;
+    color:$fixed-black !important;
+  }
+}
+
+.list-group-horizontal {
+  flex-direction: row;
+
+  &.custom-list-group-horizontal {
+    .list-group-item {
+      margin-inline-end: -1px;
+    }
+  }
+
+  .list-group-item {
+    margin-block-end: 0;
+
+    &:first-child {
+      border-start-start-radius: 3px;
+      border-end-start-radius: 3px;
+      border-start-end-radius: 0;
+    }
+
+    &:last-child {
+      margin-inline-end: 0;
+      border-start-end-radius: 3px;
+      border-end-end-radius: 3px;
+      border-end-start-radius: 0;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .list-group-horizontal-sm {
+    flex-direction: row;
+
+    &.custom-list-group-horizontal {
+      .list-group-item {
+        margin-inline-end: -1px;
+      }
+    }
+
+    .list-group-item {
+      margin-block-end: 0;
+
+      &:first-child {
+        border-start-start-radius: 3px;
+        border-end-start-radius: 3px;
+        border-start-end-radius: 0;
+      }
+
+      &:last-child {
+        margin-inline-end: 0;
+        border-start-end-radius: 3px;
+        border-end-end-radius: 3px;
+        border-end-start-radius: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .list-group-horizontal-md {
+    flex-direction: row;
+
+    &.custom-list-group-horizontal {
+      .list-group-item {
+        margin-inline-end: -1px;
+      }
+    }
+
+    .list-group-item {
+      margin-block-end: 0;
+
+      &:first-child {
+        border-start-start-radius: 3px;
+        border-end-start-radius: 3px;
+        border-start-end-radius: 0;
+      }
+
+      &:last-child {
+        margin-inline-end: 0;
+        border-start-end-radius: 3px;
+        border-end-end-radius: 3px;
+        border-end-start-radius: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .list-group-horizontal-lg {
+    flex-direction: row;
+
+    &.custom-list-group-horizontal {
+      .list-group-item {
+        margin-inline-end: -1px;
+      }
+    }
+
+    .list-group-item {
+      margin-block-end: 0;
+
+      &:first-child {
+        border-start-start-radius: 3px;
+        border-end-start-radius: 3px;
+        border-start-end-radius: 0;
+      }
+
+      &:last-child {
+        margin-inline-end: 0;
+        border-start-end-radius: 3px;
+        border-end-end-radius: 3px;
+        border-end-start-radius: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-group-horizontal-xl {
+    flex-direction: row;
+
+    &.custom-list-group-horizontal {
+      .list-group-item {
+        margin-inline-end: -1px;
+      }
+    }
+
+    .list-group-item {
+      margin-block-end: 0;
+
+      &:first-child {
+        border-start-start-radius: 3px;
+        border-end-start-radius: 3px;
+        border-start-end-radius: 0;
+      }
+
+      &:last-child {
+        margin-inline-end: 0;
+        border-start-end-radius: 3px;
+        border-end-end-radius: 3px;
+        border-end-start-radius: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .list-group-horizontal-xxl {
+    flex-direction: row;
+
+    &.custom-list-group-horizontal {
+      .list-group-item {
+        margin-inline-end: -1px;
+      }
+    }
+
+    .list-group-item {
+      margin-block-end: 0;
+
+      &:first-child {
+        border-start-start-radius: 3px;
+        border-end-start-radius: 3px;
+        border-start-end-radius: 0;
+      }
+
+      &:last-child {
+        margin-inline-end: 0;
+        border-start-end-radius: 3px;
+        border-end-end-radius: 3px;
+        border-end-start-radius: 0;
+      }
+    }
+  }
+}
+
+.list-group-flush {
+  .list-group-item {
+    border-inline-end: 0;
+    border-inline-start: 0;
+    border-radius: 0;
+
+    &:last-child {
+      margin-block-end: -1px;
+    }
+  }
+
+  &:first-child .list-group-item:first-child {
+    border-block-start: 0;
+  }
+
+  &:last-child .list-group-item:last-child {
+    margin-block-end: 0;
+    border-block-end: 0;
+  }
+}
+
+.list-group-item-primary {
+  color: #{$primary};
+  background: #{$primary-02};
+
+  &.list-group-item-action {
+
+    &:hover,
+    &:focus {
+      color: rgb($white);
+      background-color: #{$primary};
+    }
+
+    &.active {
+      color: rgb($white);
+      background-color: #{$primary};
+      border-color: #{$primary-border};
+    }
+  }
+}
+
+.list-group-item-secondary {
+  color: #{$gray-700};
+  background-color: rgba($secondary, 0.13);
+
+  &.list-group-item-action {
+
+    &:hover,
+    &:focus {
+      color: $dark;
+      background-color: #{$secondary};
+    }
+
+    &.active {
+      color: $dark;
+      background-color: #{$secondary};
+      border-color: #{$secondary};
+    }
+  }
+}
+
+.list-group-item-success {
+  color: #{$success};
+  background-color: rgba($success, 0.13);
+
+  &.list-group-item-action {
+
+    &:hover,
+    &:focus {
+      color: rgb($white);
+      background-color: #{$success};
+    }
+
+    &.active {
+      color: rgb($white);
+      background-color: #{$success};
+      border-color: #{$success};
+    }
+  }
+}
+
+.list-group-item-info {
+  color: #{$info};
+  background-color: rgba($info, 0.13);
+
+  &.list-group-item-action {
+
+    &:hover,
+    &:focus {
+      color: rgb($white);
+      background-color: #{$info};
+    }
+
+    &.active {
+      color: rgb($white);
+      background-color: #{$info};
+      border-color: #{$info};
+    }
+  }
+}
+
+.list-group-item-warning {
+  color: #{$gray-700};
+  background-color: rgba($warning, 0.13);
+
+  &.list-group-item-action {
+
+    &:hover,
+    &:focus {
+      color: $dark;
+      background-color: #{$warning};
+    }
+
+    &.active {
+      color: $dark;
+      background-color: #{$warning};
+      border-color: #{$warning};
+    }
+  }
+}
+
+.list-group-item-danger {
+  color: #{$danger};
+  background-color: rgba($danger, 0.13);
+
+  &.list-group-item-action {
+
+    &:hover,
+    &:focus {
+      color: rgb($white);
+      background-color: #{$danger};
+    }
+
+    &.active {
+      color: rgb($white);
+      background-color: rgb($white);
+      border-color: rgb($white);
+    }
+  }
+}
+
+.list-group-item-light {
+  color: #{$gray-900};
+  background-color: #{$bg-hover};
+
+  &.list-group-item-action {
+
+    &:hover,
+    &:focus {
+      color: #{$color};
+      background-color: #{$bg-hover};
+    }
+
+    &.active {
+      color: #{$color};
+      background-color: #{$bg-hover};
+      border-color: #{$bg-hover};
+    }
+  }
+}
+
+.list-group-item-dark {
+  color: #{$dark};
+  background-color: rgba($fixed-black, 0.13);
+
+  &.list-group-item-action {
+
+    &:hover,
+    &:focus {
+      color: rgb($white);
+      background-color: #{$dark};
+    }
+
+    &.active {
+      color: rgb($white);
+      background-color: #{$dark};
+      border-color: #{$dark};
+    }
+  }
+}
+
+.unlist-style-1 {
+  list-style: disc;
+}
+
+.unlist-style-2 {
+  list-style: circle;
+}
+
+.unlist-style-3 {
+  list-style: square;
+}
+
+.list-style-1 {
+  list-style: decimal;
+}
+
+.list-style-2 {
+  list-style: lower-alpha;
+}
+
+.list-style-3 {
+  list-style: lower-roman;
+}
+
+.unlist-style-1 li:not(:last-child),
+.unlist-style-2 li:not(:last-child),
+.unlist-style-3 li:not(:last-child),
+.list-style-1 li:not(:last-child),
+.list-style-2 li:not(:last-child),
+.list-style-3 li:not(:last-child),
+.list-unstyled li:not(:last-child) {
+  margin-block-end: 20px;
+}
+
+.list-group-item {
+  color: #{$default-color};
+  background-color: transparent;
+  border: 1px solid $primary-01;
+}
+
+.list-group-item.disabled,
+.list-group-item:disabled {
+  color: #{$default-color};
+  background-color: #{$bg-hover};
+}

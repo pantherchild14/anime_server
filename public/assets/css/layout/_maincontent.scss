@@ -1,0 +1,99 @@
+/* ###### 6.1 Content  ###### */
+.main-content {
+  .container, .container-fluid {
+    padding-inline-start: 24px;
+    padding-inline-end: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-content .container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .main-content .container {
+    max-width: none;
+  }
+	.browser-stats .sub-text{
+		display:none;
+	}
+	.browser-stats h6 {
+		line-height: 2;
+	}
+}
+
+.main-content-app {
+  padding-block-start: 0;
+
+  .container, .container-fluid {
+    height: 100%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-content-app {
+    padding-block-start: 0;
+  }
+}
+
+.main-content-left {
+  width: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+@media (min-width: 992px) {
+  .main-content-left {
+    display: block;
+    padding: 0;
+  }
+}
+
+.main-content-body {
+  flex: 1;
+}
+
+.main-content-title {
+  color: #{$gray-900};
+  font-weight: 500;
+  font-size: 18px;
+  text-indent: -1px;
+  line-height: 2;
+  position: relative;
+  margin-block-end: 20px;
+}
+
+@media (min-width: 992px) {
+  .main-content-title {
+    margin-block-end: 40px;
+  }
+}
+
+.main-content-label-sm {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #{$gray-500};
+  letter-spacing: .5px;
+}
+
+.main-content {
+  .header {
+    border-radius: 8px;
+    margin: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-content {
+    padding-block-start: 0 !important;
+    margin-inline-start: 240px;
+  }
+}
+
+.main-content-left.main-content-left-mail.card-body{
+    padding: 1.25rem;
+}

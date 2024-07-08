@@ -1,0 +1,246 @@
+.tabs-style1{
+  border: 1px solid #{$border};
+  border-radius: 3px;
+  overflow: hidden;
+
+  >.panel-head{
+    background: #{$bg-hover};
+  }
+  
+  >.panel-body{
+    border: none;
+  }
+}
+
+.tabs-style2{
+  >.panel-head > .nav-tabs{
+    padding: 0px 0px 10px !important;
+    border-block-end: 0;
+
+    &.p-0{
+      padding: 0px !important;
+    }
+
+    >.nav-item > .nav-link{
+      border-radius: 0.25rem;
+      border-color: #{$primary-03};
+      border-block-end: 1px solid #{$primary-03};
+      color: #{$muted};
+
+      &:not(.active):hover{
+        color: #{$primary};
+        background: #{$black-03};
+      }
+      &.active{
+        color: #{$fixed-black} ;
+        background-color: #{$primary};
+        border-color: #{$primary};
+      }
+    }
+  }
+  >.panel-body{
+    border-radius: 3px;
+  }
+}
+
+.tabs-style3{
+  display: flex;
+
+  >.panel-head > .nav-tabs{
+    flex-direction: column;
+    padding: 0px !important;
+    border-block-end: 0;
+
+    >.nav-item + .nav-item{
+      margin-inline-start: 0px;
+      margin-block-start: 10px;
+    }
+    >.nav-item{
+      >.nav-link{
+        border-radius: 0.25rem;
+        border-color: #{$border};
+        border-block-end: 1px solid #{$border};
+        color: #{$muted};
+  
+        &:not(.active):hover{
+          color: #{$primary};
+          background: #{$black-03};
+        }
+        &.active{
+          color: #{$fixed-black} ;
+          background-color: #{$primary};
+          border-color: #{$primary};
+        }
+      }
+    }
+  }
+  >.panel-body{
+    border-radius: 3px;
+    margin-inline-start: 10px;
+    flex: 1;
+  }
+}
+
+.tabs-style4{
+  display: flex;
+
+  >.panel-head{
+    order: 1;
+
+    >.nav-tabs{
+      flex-direction: column;
+      padding: 0px !important;
+      border-block-end: 0;
+  
+      >.nav-item + .nav-item{
+        margin-inline-start: 0px;
+        margin-block-start: 10px;
+      }
+      >.nav-item{
+        >.nav-link{
+          border-radius: 0.25rem;
+          border-color: #{$border};
+          border-block-end: 1px solid #{$border};
+          color: #{$muted};
+    
+          &:not(.active):hover{
+            color: #{$primary};
+            background: #{$black-03};
+          }
+
+          &.active{
+            color: #{$fixed-black} ;
+            background-color: #{$primary};
+            border-color: #{$primary};
+          }
+        }
+      }
+    }
+  }
+
+  .panel-body{
+    order: 0;
+    flex: 1;
+    border-radius: 3px;
+    margin-inline-end: 10px;
+  }
+}
+
+.tabs-style5{
+  >.panel-head > .nav-tabs{
+    padding: 0.5rem !important;
+    background: #{$black-03};
+    border-radius: 30px;
+    border-block-end: 0;
+
+    >.nav-item > .nav-link{
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      border: none;
+      color: #{$muted};
+
+      &:not(.active):hover{
+        color: #{$primary};
+        background: #{$black-03};
+      }
+
+      &.active{
+        background: #{$primary};
+        color: #{$fixed-black} ;
+      }
+    }
+  }
+  >.panel-body{
+    border: none;
+  }
+}
+
+.tabs-style6{
+  >.panel-head > .nav-tabs{
+    padding: 0.24rem !important;
+    background: #{$primary-005};
+    border-radius: 30px;
+    border-block-end: 0;
+
+    >.nav-item > .nav-link{
+      padding: 3px 10px;
+      font-size: 10px;
+      border-radius: 30px;
+      border: none;
+      color: #{$muted};
+
+      &:not(.active):hover{
+        color: #{$primary};
+        background: #{$bg-hover};
+      }
+
+      &.active{
+        background: $primary-01;
+        color: #{$primary};
+      }
+    }
+  }
+  >.panel-body{
+    border: none;
+  }
+}
+
+.tabs-style7{
+  >.panel-head > .nav-tabs{
+    border-block-end: none;
+    padding: 0px !important;
+
+    >.nav-item > .nav-link{
+      border-block-end: 2px solid transparent;
+      color: #{$muted};
+
+      &:not(.active):hover,
+      &:not(.active):focus{
+        color: #{$primary};
+        background: none;
+        border-color: transparent;
+        border-block-end-color: transparent;
+      }
+
+      &.active{
+        color: #{$primary};
+        background-color: transparent;
+        border-color: transparent transparent #{$primary} transparent;
+      }
+    }
+  }
+  >.panel-body{
+    border: none;
+  }
+
+  &.scaleX {
+    >.panel-head {
+      .nav-tabs{
+
+        > .nav-item > .nav-link{
+          position: relative;
+          border-block-end: none;
+      
+          &:focus::before, &.active::before{
+            transform: scaleX(1);
+          }
+      
+          &::before{
+            content: "";
+            position: absolute;
+            inset-block-end: 0;
+            inset-inline-start: 0%;
+            height: 2px;
+            width: 100%;
+            transform: scaleX(0);
+            transform-origin: center;
+            background-color: #{$primary};
+            transition: transform ease 300ms;
+          }
+        }
+      }
+    }
+  }
+}
+
+

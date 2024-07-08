@@ -1,0 +1,316 @@
+<style>
+    .block_area {
+        display: block;
+        margin-bottom: 30px;
+        background: #1c1c1c;
+        border-radius: 6px;
+    }
+
+    .block_area .block_area-content {
+        padding: 15px;
+    }
+
+    .anime-detail {
+        position: relative;
+        padding-left: calc(22% + 20px);
+        min-height: 275px;
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .anime-detail .anime-poster {
+        width: 22%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .anime-detail .anime-poster .film-poster {
+        padding-bottom: 130%;
+    }
+
+    .film-poster {
+        width: 100%;
+        padding-bottom: 148%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .film-poster .film-poster-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .film-infor-top {
+        position: relative;
+    }
+
+    .film-infor-top .anime-rating {
+        width: 142px;
+        float: right;
+        overflow: hidden;
+        margin-left: 5px;
+        margin-bottom: 10px;
+    }
+
+    .anime-rating {
+        position: relative;
+    }
+
+    .anime-detail .film-name {
+        font-size: 18px;
+        line-height: 1.3em;
+        margin-bottom: 5px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .anime-detail .alias {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 15px;
+        font-style: italic;
+    }
+
+    .anime-detail .film-description {
+        font-size: 13px;
+        color: #666;
+    }
+
+    .anime-detail .meta .col1,
+    .anime-detail .meta .col2 {
+        float: left;
+        width: 50%;
+    }
+
+    .anime-detail .meta .item {
+        color: #666;
+    }
+
+    .anime-detail .meta .item .item-title {
+        display: inline;
+    }
+
+    .anime-detail .meta .item .item-content {
+        display: inline;
+        margin-left: 5px;
+        color: #ababab;
+    }
+
+    .anime-detail .meta .item .item-content a {
+        color: #927daf;
+    }
+
+    .block_area-episodes .block_area-content {
+        padding-top: 10px;
+    }
+
+    .episodes-ul {
+        display: block;
+        margin: 0 -5px;
+    }
+
+    .episodes-ul .item.active {
+        background: #5a2e98;
+        color: #fff;
+    }
+
+    .episodes-ul .item:visited {
+        background: #2f2242;
+        color: #888;
+    }
+
+    .episodes-ul .item {
+        float: left;
+        display: block;
+        cursor: pointer;
+        width: calc(6.25% - 10px);
+        margin: 0 5px 10px;
+        line-height: 32px;
+        background: #303030;
+        color: #929292;
+        text-align: center;
+        border-radius: 3px;
+    }
+</style>
+<section class="block_area block_area-detail position-relative" style="width: 986px; height: 360px;">
+    <div class="block_area-content">
+
+        <div class="anime-detail">
+            <div class="anime-poster">
+                <div class="film-poster">
+                    <img src="http://localhost:3000/images/<%= animeDetail.poster %>" class="film-poster-img"
+                        alt="Film Poster">
+                </div>
+            </div>
+            <div class="film-infor">
+                <div class="film-infor-top">
+
+                    <h2 class="film-name dynamic-name" data-jname="<%= animeDetail.title %>">
+                        <%= animeDetail.title %>
+                    </h2>
+                    <!-- <div class="alias">
+                        <%= animeDetail.alias %>
+                    </div> -->
+                </div>
+                <div class="film-description">
+                    <p class="shorting">
+                        <%= animeDetail.description %>
+                    </p>
+                </div>
+                <div class="meta">
+                    <div class="col1">
+                        <% Object.entries(JSON.parse(animeDetail.meta)).forEach(([key, value])=> { %>
+                            <% if (key==='Tập mới' || key==='Trạng thái' || key==='Số người theo dõi' || key==='Điểm' ||
+                                key==='Năm phát hành' ) { %>
+                                <div class="item">
+                                    <div class="item-title">
+                                        <%= key %>:
+                                    </div>
+                                    <div class="item-content">
+                                        <% if (key==='Type' || key==='Studios' || key==='Genre' ) { %>
+                                            <% value.split(',').forEach(genre=> { %>
+                                                <a href="/<%= genre.trim().toLowerCase() %>">
+                                                    <%= genre.trim() %>
+                                                </a>
+                                                <% if (genre !==value.split(',').pop()) { %>, <% } %>
+                                                        <% }) %>
+                                                            <% } else { %>
+                                                                <%= value %>
+                                                                    <% } %>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <% }}) %>
+                    </div>
+                    <div class="col1">
+                        <% Object.entries(JSON.parse(animeDetail.meta)).forEach(([key, value])=> { %>
+                            <% if (key==='Thời\n                                                lượng' ||
+                                key==='Chất lượng' || key==='Rating' || key==='Ngôn ngữ' || key==='Thể loại' ) { %>
+                                <div class="item">
+                                    <div class="item-title">
+                                        <%= key %>:
+                                    </div>
+                                    <div class="item-content">
+                                        <% if (key==='Type' || key==='Studios' || key==='Genre' ) { %>
+                                            <% value.split(',').forEach(genre=> { %>
+                                                <a href="/<%= genre.trim().toLowerCase() %>">
+                                                    <%= genre.trim() %>
+                                                </a>
+                                                <% if (genre !==value.split(',').pop()) { %>, <% } %>
+                                                        <% }) %>
+                                                            <% } else { %>
+                                                                <%= value %>
+                                                                    <% } %>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <% }}) %>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="update-data text-end">
+            <button class="btn btn-success btnUpdate" data-href="<%= animeDetail.paramHref %>">Cập nhập</button>
+        </div>
+    </div>
+</section>
+<section class="block_area block_area-episodes">
+    <div class="block_area-content">
+
+        <div id="episodes" class="episodes-ul">
+            <% if (listEpisode && listEpisode.length> 0) { %>
+                <% listEpisode.forEach(function(item) { %>
+                    <a href="<%= animeDetail.paramHref %>/<%= item.episode_number %>"
+                        title="Special Episode: Barto's Secret Room" class="item ep-item active"
+                        data-number="<%= item.episode_number %>" data-id="<%= item.anime_id %>">
+                        <div class="order">
+                            <%= item.episode_number %>
+                        </div>
+                    </a>
+                    <% }); %>
+                        <% } else { %>
+                            <p>No episodes available</p>
+                            <% } %>
+                                <div class="clearfix"></div>
+        </div>
+    </div>
+</section>
+<section class="block_area block_area-uploadDrive">
+    <div class="block_area-content">
+        <form id="uploadForm">
+            <div class="form-group d-none">
+                <input type="text" class="form-control" id="id_anime" name="id_anime"
+                    value="<%= animeDetail.anime_id %>">
+            </div>
+            <div class="form-group">
+                <label for="episode_number">Tập phim:</label>
+                <input type="text" data_href="<%= animeDetail.paramHref %>" class="form-control" id="episode_number"
+                    name="episode_number" placeholder="Nhập tập phim">
+            </div>
+            <div class="form-group">
+                <label for="linkDrive">Link Drive</label>
+                <input type="text" class="form-control" id="linkDrive" name="linkDrive" placeholder="Nhập link drive">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $('#uploadForm').on('submit', function (e) {
+            e.preventDefault();
+
+            const idAnimeValue = $('#id_anime').val();
+            const episodeNumberValue = $('#episode_number').val();
+            const linkDriveValue = $('#linkDrive').val();
+            const paramHref = $('#episode_number').attr('data_href');
+
+            $.ajax({
+                type: "POST",
+                url: "/addDrive",
+                data: JSON.stringify({
+                    idAnime: idAnimeValue,
+                    episodeNumber: episodeNumberValue,
+                    linkDrive: linkDriveValue,
+                    paramHref: paramHref
+                }),
+                contentType: "application/json",
+                success: function (response) {
+                    alert('Form submitted successfully');
+                },
+                error: function (error) {
+                    alert('Error submitting form');
+                }
+            });
+        });
+
+        $(document).on("click", ".btnUpdate", function (e) {
+            e.preventDefault();
+            const href = $(this).data("href");
+            console.log(href)
+            $.ajax({
+                url: "/admin/update_detail",
+                type: "put",
+                data: {
+                    url: `/phim/${href}`,
+                },
+                success: function (response) {
+                    // window.location.href = window.location.origin + "/admin";
+                },
+                error: function (xhr, status, error) {
+                    console.error("Error deleting episode:", error);
+                }
+            });
+        });
+    });
+
+
+</script>

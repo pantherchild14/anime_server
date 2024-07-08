@@ -1,0 +1,36 @@
+.main-mail-group {
+  >.list-group-item {
+    border: none;
+    border-block-end: 1px dashed #{$border};
+
+    &:hover,
+    &:focus,
+    &.active,
+    &.selected {
+      background-color: #{$bg-hover}  !important;
+      border-color: #{$border}  !important;
+    }
+
+    &:last-child {
+      border-block-end: none;
+    }
+  }
+}
+
+.main-mail-star {
+  font-size: 18px;
+  line-height: .9;
+  color: rgb($background-gradient-color);
+  position: relative;
+  inset-block-start: -11px;
+
+  &.active {
+    color: #{$warning};
+  }
+}
+
+.main-content-mail {
+  .list-group-item {
+    padding: 0.75rem 1.25rem;
+  }
+}

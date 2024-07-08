@@ -1,0 +1,48 @@
+<div class="mt-3">
+  <div class="avatar avatar-xxl avatar-xxl mx-auto text-center mb-2">
+    <img alt="" class="avatar avatar-xxl rounded-circle mt-2 mb-2" src="../assets/img/users/noah.jpg" />
+  </div>
+  <div class="mx-auto text-center mg-b-20">
+    <h5 class="mg-b-15 tx-16 text-dark">Noah</h5>
+    <h6 class="tx-13 text-muted text-dark">Enter password to unlock screen</h6>
+  </div>
+  <form id="loginForm">
+    <div class="form-group">
+      <input class="form-control" id="email" name="email" placeholder="Enter your email" type="email" value=""
+        required />
+      <input class="form-control" id="password" name="password" placeholder="Enter your password" type="password"
+        value="" required />
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Unlock</button>
+  </form>
+</div>
+<script>
+  $(document).ready(function () {
+    $("#loginForm").submit(function (event) {
+      event.preventDefault();
+      var email = $("#email").val();
+      var password = $("#password").val();
+      var data = {
+        email: email,
+        password: password,
+      };
+      $.ajax({
+        type: "POST",
+        url: "/login",
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        success: function (response) {
+          window.location.href = "/home";
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          window.location.href = "/login";
+        },
+      });
+    });
+  });
+</script>
+<script src="./../../assets/plugins/jquery/jquery.min.js"></script>
+<script src="./../../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="./../../assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+<script src="./../../assets/js/authentication.js"></script>
+<script src="./../../assets/js/custom.js"></script>

@@ -1,0 +1,223 @@
+img {
+  vertical-align: middle;
+  border-style: none;
+  max-width: 100%;
+}
+
+.img-thumbnail .caption {
+  padding: 15px;
+}
+
+.avatar-group{
+  display: flex;
+  align-items: center;
+
+  .avatar, .avatar-status, .avatar-badge{
+    margin: 2px;
+  }
+}
+
+.avatar {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #{$fixed-white} ;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.avatar-xs {
+  width: 24px !important;
+  height: 24px !important;
+  font-size: 11px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #{$fixed-white} ;
+
+  &::after {
+    width: 4px !important;
+    height: 4px !important;
+    inset-block-end: 1px !important;
+    inset-inline-end: 2px !important;
+  }
+}
+
+.avatar-sm {
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 12px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #{$fixed-white} ;
+
+  &::after{
+    width: 5px !important;
+    height: 5px !important;
+  }
+}
+
+.avatar-lg {
+  width: 60px !important;
+  height: 60px !important;
+  font-size: 28px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #{$fixed-white} ;
+
+  &::after {
+    width: 10px !important;
+    height: 10px !important;
+    inset-block-end: 3px !important;
+    inset-inline-end: 4px !important;
+  }
+}
+
+.avatar-xl {
+  width: 84px !important;
+  height: 84px !important;
+  font-size: 36px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #{$fixed-white} ;
+
+  &::after {
+    width: 11px !important;
+    height: 11px !important;
+    inset-block-end: 4px !important;
+    inset-inline-end: 5px !important;
+  }
+}
+
+.avatar-xxl {
+  width: 100px !important;
+  height: 100px !important;
+  font-size: 56px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #{$fixed-white} ;
+
+  &::after {
+    width: 13px !important;
+    height: 13px !important;
+    inset-block-end: 6px !important;
+    inset-inline-end: 7px !important;
+  }
+}
+
+.avatar-status {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset-block-end: 3px;
+    inset-inline-end: 3px;
+    width: 7px;
+    height: 7px;
+    background-color: #{$success};
+    box-shadow: 0 0 0 2px #{$shadow-color};
+    border-radius: 100%;
+    display: block !important;
+  }
+
+  &.offline::after {
+    background-color: #{$gray-500};
+  }
+}
+
+.wrapper.image-group .img-xs.rounded-circle {
+  margin-inline-end: -5px;
+}
+
+.number-badge{
+  position: absolute;
+  inset-block-start: -7px;
+  inset-inline-end: -5px;
+  padding: 3px;
+  font-size: 11px;
+  line-height: 1;
+  border: 2px solid #{$border};
+  height: 20px;
+  width: 20px;
+}
+
+.avatar-badge, .avatar-btn{
+  position: relative;
+}
+
+.avatar-badge{
+  &.avatar-xs{
+    .number-badge{
+      font-size: 7px;
+      inset-block-start: -7px;
+      inset-inline-end: -6px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &.avatar-sm {
+    .number-badge {
+      inset-block-start: -8px;
+      inset-inline-end: -6px;
+      font-size: 9px;
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  &.avatar-lg {
+    .number-badge {
+      height: 26px;
+      width: 26px;
+      line-height: 1.3;
+      font-size: 12px;
+    }
+  }
+
+  &.avatar-xl {
+    .number-badge {
+      height: 30px;
+      width: 30px;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+  }
+
+  &.avatar-xxl {
+    .number-badge {
+      height: 32px;
+      width: 32px;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+  }
+}
+
+.avatar-list-stacked{
+  display: flex;
+  align-items: center;
+  
+  > :not(:first-child){
+    margin-inline-start: -.8em !important;
+  }
+
+  > .avatar {
+    box-shadow: 0 0 0 2px #{$shadow};
+    transition: transform ease 200ms;
+
+    &:hover{
+      z-index: 1;
+      transform: translateY(-3px);
+    }
+  }
+}

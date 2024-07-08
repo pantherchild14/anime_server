@@ -1,0 +1,2 @@
+- Đầu tiên 
+ + xử lý search anime: https://9animetv.to/ajax/search/suggest?keyword=${keyword}.

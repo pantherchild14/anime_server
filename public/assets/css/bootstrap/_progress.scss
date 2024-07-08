@@ -1,0 +1,290 @@
+.progress-bar-xs {
+  height: 5px !important;
+}
+
+.progress-bar-sm {
+  height: 8px !important;
+}
+
+.progress-bar-lg {
+  height: 15px !important;
+}
+
+.progress {
+  font-size: 0.65625rem;
+  background-color: #{$black-03};
+  border-radius: 4px;
+  height: auto;
+}
+
+.progress-bar {
+  background-color: #{$primary};
+  border-radius: 4px;
+  height: 13px;
+  font-size: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar {
+    transition: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar-animated {
+    animation: none;
+  }
+}
+
+.progress-sm .progress-bar {
+  border-radius:1px;
+}
+
+.progress-style {
+  .table {
+    th,
+    td {
+      padding: 0.75rem;
+      vertical-align: middle;
+    }
+  }
+
+  &.progress {
+    overflow: visible !important;
+
+    .progress-bar:after {
+      content: "";
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 4px solid #{$primary};
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+      background: transparent ;
+      position: absolute;
+      inset-inline-end: -5px;
+      inset-block-start: -5px;
+    }
+  }
+
+  .bg-secondary.progress-bar:after {
+    border-color: #{$secondary};
+  }
+
+  .bg-danger.progress-bar:after {
+    border-color: #{$danger};
+  }
+
+  .bg-teal.progress-bar:after {
+    border-color: #{$teal};
+  }
+
+  .bg-pink.progress-bar:after {
+    border-color: #{$pink};
+  }
+
+  .bg-success.progress-bar:after {
+    border-color: #{$success};
+  }
+
+  .bg-danger-gradient.progress-bar:after {
+    border-color: #{$danger};
+  }
+
+  .bg-warning.progress-bar:after {
+    border-color: #{$warning};
+  }
+
+  .bg-info.progress-bar:after {
+    border-color: #{$info};
+  }
+
+  .bg-indigo.progress-bar:after {
+    border-color: #{$indigo}  ;
+  }
+
+  .bg-dark.progress-bar:after {
+    border-color: $dark;
+  }
+
+  &.progress .progress-bar {
+    position: relative;
+  }
+
+  .progress-bar {
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    overflow: visible !important;
+    color: rgb($white) ;
+    text-align: center;
+  }
+}
+
+/* Custom Progressbar */
+.progress-bar-custom {
+  height: 3px;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  &.progress-bar-custom-primary {
+    background-color: $primary-03;
+  }
+  &.progress-bar-custom-secondary {
+    background-color: #{$secondary-03};
+  }
+  &.progress-bar-custom-warning {
+    background-color: rgba($warning,0.3);
+  }
+  &.progress-bar-custom-info {
+    background-color: rgba($info,0.3);
+  }
+  &.progress-bar-custom-success {
+    background-color: rgba($success,0.3);
+  }
+  &.progress-bar-custom-danger {
+    background-color: rgba($danger,0.3);
+  }
+  &.progress-bar-custom-purple {
+    background-color: rgba($purple,0.3);
+  }
+  &.progress-bar-custom-orange {
+    background-color: rgba($orange,0.3);
+  }
+  &.progress-bar-custom-white {
+    background-color: rgba($white,0.3);
+  }
+  .progress-custom {
+    position: relative;
+    height: 100%;
+    transition: width 0.5s ease-out;
+    border-radius: 0px 2px 2px 0px;
+    &.progress-primary {
+      background-color: $primary;
+    }
+    &.progress-secondary {
+      background-color: $secondary;
+    }
+    &.progress-danger {
+      background-color: $danger;
+    }
+    &.progress-warning {
+      background-color: $warning;
+    }
+    &.progress-info {
+      background-color: $info;
+    }
+    &.progress-success {
+      background-color: $success;
+    }
+    &.progress-purple {
+      background-color: $purple;
+    }
+    &.progress-orange {
+      background-color: $orange;
+    }
+    &.progress-white {
+      background-color: $white;
+    }
+  }
+  .glow {
+    width: 60px;
+    max-width: 100%;
+    height: 100%;
+    float: right;
+  }
+  .glow::before,
+  .glow::after {
+    content: "";
+    display: block;
+    position: relative;
+    border-radius: 0px 2px 2px 0px;
+  }
+  .glow.glow-primary::before {
+    background: transparent;
+    height: 100%;
+    box-shadow: 0px 0px 10px $primary, 0px 0px 10px $primary;
+    z-index: -5; 
+  }
+  .glow.glow-secondary::before {
+    background: transparent;
+    height: 100%;
+    box-shadow: 0px 0px 10px $secondary, 0px 0px 10px $secondary;
+    z-index: -5; 
+  }
+  .glow.glow-warning::before {
+    background: transparent;
+    height: 100%;
+    box-shadow: 0px 0px 10px $warning, 0px 0px 10px $warning;
+    z-index: -5; 
+  }
+  .glow.glow-info::before {
+    background: transparent;
+    height: 100%;
+    box-shadow: 0px 0px 10px $info, 0px 0px 10px $info;
+    z-index: -5; 
+  }
+  .glow.glow-success::before {
+    background: transparent;
+    height: 100%;
+    box-shadow: 0px 0px 10px $success, 0px 0px 10px $success;
+    z-index: -5; 
+  }
+  .glow.glow-danger::before {
+    background: transparent;
+    height: 100%;
+    box-shadow: 0px 0px 10px $danger, 0px 0px 10px $danger;
+    z-index: -5; 
+  }
+  .glow.glow-orange::before {
+    background: transparent;
+    height: 100%;
+    box-shadow: 0px 0px 10px $orange, 0px 0px 10px $orange;
+    z-index: -5; 
+  }
+  .glow.glow-purple::before {
+    background: transparent;
+    height: 100%;
+    box-shadow: 0px 0px 10px $purple, 0px 0px 10px $purple;
+    z-index: -5; 
+  }
+  .glow.glow-white::before {
+    background: transparent;
+    height: 100%;
+    box-shadow: 0px 0px 10px $white, 0px 0px 10px $white;
+    z-index: -5; 
+  }
+  .glow::after {
+    background: linear-gradient(to right, #1b2b32 0%, transparent 100%);
+    height: 15px;
+    width: calc(100% + 10px);
+    top: -10px;
+    inset-inline-start: -10px;
+    z-index: -3;
+  } 
+}
+
+// animations
+.fill-1 {
+  animation: fill-1 0.5s ease-out 0s;
+  animation-fill-mode: forwards;
+  width: 0%;
+}
+@keyframes fill-1 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes label {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+/* Custom Progressbar */

@@ -1,0 +1,131 @@
+.demo_changer {
+	z-index         : 99999;
+	position        : fixed;
+	inset-inline-end: -270px;
+	font-weight     : 400 !important;
+	height          : 100%;
+	transition		: none;
+}
+
+.demo_changer p {
+	margin: 10px 0;
+}
+
+.demo_changer hr {
+	border-color: #E0E0E0;
+}
+
+.demo_changer h4 {
+	font-size        : 14px;
+	padding-block-end: 0;
+	text-align       : start;
+	padding          : 10px;
+	font-weight      : 600;
+	margin           : 10px 0 !important;
+	text-transform   : uppercase;
+}
+
+.demo_changer i {
+	color             : #fff;
+	font-size         : 21px;
+	margin-block-start: 10px;
+
+}
+
+.demo_changer .demo-icon {
+	cursor           : pointer;
+	text-align       : center;
+	padding          : 2px;
+	float            : left;
+	height           : 40px;
+	line-height      : 38px;
+	width            : 40px;
+	border-radius    : 5px 0 0 5px !important;
+	inset-block-start: 17rem;
+	position         : relative;
+}
+
+@media (max-width: 992px) {
+	.demo_changer .form_holder {
+		height: 100vh;
+	}
+}
+
+@media (min-width: 992px) {
+	.demo_changer .form_holder {
+		height: 100vh;
+	}
+}
+
+.demo_changer .form_holder {
+	background   : #fff;
+	border-radius: 0;
+	cursor       : pointer;
+	float        : right;
+	font-size    : 12px;
+	padding      : 0 7px;
+	width        : 270px;
+}
+
+.demo_changer.active .form_holder {
+	box-shadow: 0px 8px 14.72px 1.28px rgba(130, 130, 134, 0.2);
+}
+
+.demo_changer .form_holder p {
+	font-size: 12px;
+}
+
+.predefined_styles {
+	padding   : 0 5px;
+	text-align: center;
+
+}
+
+@media only screen and (min-width: 768px) {
+	.demo_changer {
+		inset-block-start: 0;
+	}
+
+	.demo_changer .demo-icon {
+		height: 40px;
+		width : 40px;
+	}
+
+	.demo_changer i {
+		font-size: 17px;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.demo_changer {
+		inset-block-start: 0px;
+	}
+
+	.demo_changer i {
+		font-size         : 21px;
+		margin-block-start: 8px;
+	}
+
+	.demo_changer .demo-icon {
+		height: 40px;
+		width : 40px;
+	}
+
+	.demo_changer {
+		display: block;
+	}
+}
+
+.demo-icon i {
+	display: inline-block;
+
+}
+
+.switch-toggle img {
+	width : 50px;
+	height: 80px;
+	border-radius: 7px;
+}
+.card .predefined_styles {
+    padding: 1rem 2rem;
+}

@@ -1,0 +1,467 @@
+.badge-light {
+  background-color: #{$bg-hover};
+  color: #{$black};
+}
+
+.badge-pill {
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
+}
+
+.badge-primary-transparent {
+  color: #{$primary};
+  background-color: #{$primary-02};
+}
+
+.badge-secondary-transparent {
+  color: #{$secondary};
+  background-color: rgba($secondary-rgb,0.15) !important;
+}
+
+.badge-success-transparent {
+  background-color: rgba($success,0.15) !important;
+  color: #{$success};
+}
+
+.badge-teal-transparent {
+  background-color: rgba($teal,0.15) !important;
+  color: #{$teal};
+}
+
+.badge-green-transparent {
+  background-color: rgba($green,0.15) !important;
+  color: #{$green};
+}
+
+.badge-warning-transparent {
+  background-color: rgba($warning, 0.15) !important;
+  color: #{$warning};
+}
+
+.badge-danger-transparent {
+  color: #{$danger};
+  background-color: rgba($danger,0.15);
+}
+
+.badge-purple-transparent {
+  color: #{$purple};
+  background-color: rgba($purple,0.15);
+}
+
+.badge-info-transparent {
+  color: #{$info};
+  background-color: rgba($info, 0.15);
+}
+
+.badge-pink-transparent {
+  color: #{$pink};
+  background-color: rgba($pink,0.15);
+}
+
+.badge-light-transparent {
+  color: #{$muted};
+  background-color: rgba($fixed-black,0.15);
+}
+
+.badge-dark-transparent {
+  color: $dark;
+  background-color: rgba($fixed-black, 0.15);
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 6px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 3px;
+  font-size: 75%;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.badge-sm{
+  padding: 5px 9px !important;
+  font-size: 11px;
+  &.rounded-circle{
+    padding: 5px !important;
+  }
+}
+.badge-md{
+  padding: 6px 11px !important;
+  font-size: 12px;
+  &.rounded-circle{
+    padding: 6px !important;
+  }
+}
+.badge-lg{
+  padding: 8px 13px !important;
+  font-size: 13px;
+  &.rounded-circle{
+    padding: 8px !important;
+  }
+}
+
+.badge-top{
+  inset-inline-start: 100%;
+  transform: translate(-50%, -50%);
+  position: absolute !important;
+  border: 2px solid #{$border} ;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge {
+    transition: none;
+  }
+}
+
+a.badge {
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+.badge:empty {
+  display: none;
+}
+
+.btn .badge, .sp-container button .badge {
+  inset-block-start: -1px;
+}
+
+.badge-pill {
+  padding-inline-end: 0.6em;
+  padding-inline-start: 0.6em;
+  border-radius: 10rem;
+}
+
+.badge-primary {
+  color: #{$fixed-black} ;
+  background-color: #{$primary};
+}
+
+a.badge-primary {
+  &:hover {
+    color: #{$fixed-black} ;
+    background-color: #{$primary-02};
+  }
+
+  &:focus {
+    color: #{$fixed-black} ;
+    background-color: #{$primary-02};
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #{$primary-02};
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #{$primary-02};
+  }
+}
+
+.badge-secondary {
+  color: $dark !important;
+  background-color: #{$secondary} !important;
+}
+
+a.badge-secondary {
+  &:hover {
+    color: #{$fixed-black} ;
+    background-color: rgba($secondary, 0.65);
+  }
+
+  &:focus {
+    color: #{$fixed-black} ;
+    background-color: rgba($secondary, 0.65);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($secondary, 0.15);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($secondary, 0.15);
+  }
+}
+
+.badge-success {
+  color: #{$fixed-white} ;
+  background-color: #{$success};
+}
+
+a.badge-success {
+  &:hover {
+    color: #{$fixed-white} ;
+    background-color: rgba($success, 0.65);
+  }
+
+  &:focus {
+    color: #{$fixed-white} ;
+    background-color: rgba($success, 0.65);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($success, 0.1);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($success, 0.1);
+  }
+}
+
+.badge-green {
+  color: #{$fixed-white} ;
+  background-color: #{$green};
+}
+
+a.badge-green {
+  &:hover {
+    color: #{$fixed-white} ;
+    background-color: rgba($green, 0.65);
+  }
+
+  &:focus {
+    color: #{$fixed-white} ;
+    background-color: rgba($green, 0.65);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($green, 0.1);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($green, 0.1);
+  }
+}
+
+.badge-info {
+  color: #{$fixed-white} ;
+  background-color: #{$info};
+}
+
+a.badge-info {
+  &:hover {
+    color: #{$fixed-white} ;
+    background-color: #{$info};
+  }
+
+  &:focus {
+    color: #{$fixed-white} ;
+    background-color: #{$info};
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($info, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($info, 0.5);
+  }
+}
+
+.badge-warning {
+  color: #{$fixed-white} ;
+  background-color: #{$warning};
+}
+
+a.badge-warning {
+  &:hover, &:focus {
+    color: #{$gray-900};
+    background-color: #{$warning};
+  }
+}
+
+.badge-purple {
+  color: #{$fixed-white} ;
+  background-color: #{$purple};
+}
+
+a.badge-purple {
+  &:hover {
+    color: #{$fixed-white} ;
+    background-color: #{$purple};
+  }
+
+  &:focus {
+    color: #{$fixed-white} ;
+    background-color: #{$purple};
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($purple, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($purple, 0.5);
+  }
+}
+
+.badge-teal {
+  color: #{$fixed-white} ;
+  background-color: #{$teal};
+}
+
+a {
+  &.badge-teal {
+    &:hover, &:focus {
+      color: #{$gray-900};
+      background-color: #{$teal};
+    }
+  }
+}
+
+.badge-danger {
+  color: #{$fixed-white} ;
+  background-color: #{$danger};
+}
+
+a.badge-danger {
+  &:hover {
+    color: #{$fixed-white} ;
+    background-color: #{$danger};
+  }
+
+  &:focus {
+    color: #{$fixed-white} ;
+    background-color: #{$danger};
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($danger, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($danger, 0.5);
+  }
+}
+
+.badge-pink {
+  color: #{$fixed-white} ;
+  background-color: #{$pink};
+}
+
+a.badge-pink {
+  &:hover {
+    color: #{$fixed-white} ;
+    background-color: #{$pink};
+  }
+
+  &:focus {
+    color: #{$fixed-white} ;
+    background-color: #{$pink};
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($pink, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($pink, 0.5);
+  }
+}
+
+.badge-purple {
+  color: #{$fixed-white} ;
+  background-color: #{$purple};
+}
+
+a.badge-purple {
+  &:hover {
+    color: #{$fixed-white} ;
+    background-color: #{$purple};
+  }
+
+  &:focus {
+    color: #{$fixed-white} ;
+    background-color: #{$purple};
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($purple, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($purple, 0.5);
+  }
+}
+
+.bg-light {
+  color: #{$gray-900};
+  background-color: #{$gray-100};
+}
+
+a.badge-light {
+  &:hover {
+    color: #{$gray-900};
+    background-color: #{$bg-hover};
+  }
+
+  &:focus {
+    color: #{$gray-900};
+    background-color: #{$bg-hover};
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(244, 245, 248, 0.5);
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(244, 245, 248, 0.5);
+  }
+}
+
+.badge-dark {
+  color: #{$fixed-white} ;
+  background-color: #{$gray-800};
+}
+
+a.badge-dark {
+  &:hover {
+    color: #{$fixed-white} ;
+    background-color: #{$dark};
+  }
+
+  &:focus {
+    color: #{$fixed-white} ;
+    background-color: #{$dark};
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #{$shadow-color};
+  }
+
+  &.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #{$shadow-color};
+  }
+}
+
+@media print {
+  .badge {
+    border: 1px solid #{$black};
+  }
+}
+
+.badge.badge-orange{
+     color: #{$fixed-white} ;
+    background-color: #{$orange};
+}
+
+.badge.badge-cyan{
+ color: #{$fixed-white} ;
+    background-color: #{$purple};
+}
+
+.badge.bg-white {
+    color: #{$default-color} !important;
+}
+
+.btn-outline-primary:hover .bg-primary {
+    background: #{$fixed-white} !important;
+    color: #{$primary};
+}
+
+.btn-outline-success:hover .bg-success {
+    background: #{$fixed-white} !important;
+    color: #{$success};
+}
+
+.btn-outline-secondary:hover .bg-secondary {
+    background: #{$fixed-white} !important;
+    color: #{$secondary};
+}
+
+.btn-outline-info:hover .bg-info {
+    background: #{$fixed-white} !important;
+    color: #{$info};
+}

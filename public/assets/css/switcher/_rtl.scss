@@ -1,0 +1,189 @@
+[dir="rtl"] {
+
+    .sidebar.sidebar-right,
+    .fm-sidebar {
+        transform: translate(-100%, 0);
+    }
+
+    .main-sidemenu i.angle {
+        transform: rotate(180deg);
+    }
+
+    .sub-slide.is-expanded .sub-angle {
+        transform: rotate(90deg);
+    }
+
+    .sub-slide2.is-expanded .sub-angle2 {
+        transform: rotate(90deg);
+    }
+
+    .fc-direction-ltr {
+        direction: rtl;
+
+        .fc-button .fc-icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    #projectReport {
+        .apexcharts-yaxis-texts-g text {
+            transform: translate(0, 0px);
+        }
+    }
+
+    .apexcharts-yaxis-texts-g text {
+        transform: translate(-70px, 0px);
+    }
+
+    .pagination .page-item .page-link i {
+        transform: rotate(180deg);
+    }
+
+    .badge-top {
+        transform: translate(50%, -50%);
+    }
+
+    .carousel .carousel-control-next i,
+    .carousel .carousel-control-prev i {
+        transform: rotate(180deg);
+    }
+
+    .active.carousel-item-start,
+    .carousel-item-prev:not(.carousel-item-end) {
+        transform: translateX(100%) !important;
+    }
+
+    .active.carousel-item-end {
+        transform: translateX(-100%) !important;
+    }
+
+    .carousel-item-next:not(.carousel-item-start) {
+        transform: translateX(-100%) !important;
+        transform: translateX(-100%) !important;
+    }
+
+    .vtimeline .timeline-wrapper .timeline-badge {
+        transform: translateX(50%);
+    }
+
+    .image-attach .attach-options {
+        transform: translateX(50%);
+    }
+
+    .smartphoto-arrow-right a,
+    .smartphoto-arrow-left a {
+        transform: rotate(360deg);
+    }
+
+    .was-validated .form-control:invalid,
+    .form-control.is-invalid,
+    input.form-control.parsley-error,
+    textarea.form-control.parsley-error {
+        background-position: center left calc(0.375em + 0.1875rem);
+    }
+
+    .was-validated .form-control:valid,
+    .form-control.is-valid,
+    input.form-control.parsley-success,
+    textarea.form-control.parsley-success {
+        background-position: center left calc(0.375em + 0.1875rem);
+    }
+
+    [type=email],
+    [type=number],
+    [type=tel],
+    [type=url] {
+        direction: rtl;
+    }
+
+    .slide-right svg,
+    .slide-left svg {
+        transform: rotate(180deg);
+    }
+
+    .select2-dropdown {
+        direction: ltr !important;
+        text-align: end;
+
+        .select2-results__option {
+            direction: rtl !important;
+        }
+    }
+
+    .tabs-style6 {
+        .nav-tabs {
+            .nav-item {
+                .nav-link {
+                    direction: initial;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu {
+        direction: rtl !important;
+    }
+
+    .smartphoto {
+        direction: ltr !important;
+    }
+
+    #basicSlider .MS-content {
+        direction: ltr;
+    }
+
+    .pcr-app {
+        direction: ltr;
+    }
+
+    .tooltip.show {
+        direction: ltr;
+    }
+
+    .tooltip-static-demo .tooltip {
+        direction: ltr;
+    }
+
+    .bs-popover-end>.popover-arrow,
+    .bs-popover-auto[data-popper-placement^=right]>.popover-arrow,
+    .bs-popover-start>.popover-arrow,
+    .bs-popover-auto[data-popper-placement^=left]>.popover-arrow {
+        direction: ltr;
+    }
+
+    .irs-from, .irs-to, .irs-single {
+        inset-inline-start: auto;
+    }
+
+    .leaflet-pane, .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-tile-container {
+        inset-inline-end: 0;
+        inset-inline-start: auto;
+    }
+   
+    .si-arrow-right-circle:before {
+        content: "\e07a";
+    }
+    .fe-chevrons-left:before {
+        content: "\e933";
+    }
+    .fe-chevrons-right:before {
+        content: "\e932";
+    }
+    .breadcrumb-style2 {
+        .breadcrumb-item+.breadcrumb-item::before {
+          content: var(--bs-breadcrumb-divider, "\f3cf");
+        }
+    }
+    .breadcrumb-style3 {
+        .breadcrumb-item+.breadcrumb-item::before {
+          content: var(--bs-breadcrumb-divider, "\e932");
+        }
+    }
+    .lds-heart {
+        transform: rotate(315deg);
+    }
+    .a-center {
+        inset-inline-start: 20%;
+    }
+}
+

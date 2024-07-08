@@ -1,0 +1,227 @@
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem;
+
+  > {
+    .container, .container-fluid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0;
+  margin-block-end: 0;
+  list-style: none;
+
+  .nav-link {
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    float: none;
+  }
+}
+
+.navbar-toggler {
+  font-size: 1.09375rem;
+	color: #272746;
+	position: relative;
+	line-height: 35px;
+	outline: none;
+	height: 37px;
+	width: 37px;
+	text-align: center;
+	border: 0px solid #dfd7e9;
+
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.7em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+  color: $primary;
+  filter: drop-shadow(0 2px 5px var(--primary-bg-color));
+}
+
+@media (max-width: 991.98px) {
+  .navbar-expand-lg > {
+    .container, .container-fluid {
+      padding-inline-end: 0;
+      padding-inline-start: 0;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+
+    .navbar-nav {
+      flex-direction: row;
+
+      .dropdown-menu {
+        position: absolute;
+      }
+
+      .nav-link {
+        padding-inline-end: 0.5rem;
+        padding-inline-start: 0.5rem;
+      }
+    }
+
+    > {
+      .container, .container-fluid {
+        flex-wrap: nowrap;
+      }
+    }
+
+    .main-header {
+      display: flex !important;
+      flex-basis: auto;
+    }
+
+    .navbar-toggler {
+      display: none;
+    }
+  }
+}
+
+.navbar-expand {
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+
+  > {
+    .container, .container-fluid {
+      padding-inline-end: 0;
+      padding-inline-start: 0;
+    }
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+
+    .dropdown-menu {
+      position: absolute;
+    }
+
+    .nav-link {
+      padding-inline-end: 0.5rem;
+      padding-inline-start: 0.5rem;
+    }
+  }
+
+  > {
+    .container, .container-fluid {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .main-header {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+.navbar-dark {
+  .navbar-nav {
+    .nav-link {
+      color: #{$white-5};
+
+      &:hover, &:focus {
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      &.disabled {
+        color: rgba(255, 255, 255, 0.25);
+      }
+    }
+
+    .show > .nav-link, .active > .nav-link {
+      color: rgb($white) ;
+    }
+
+    .nav-link {
+      &.show, &.active {
+        color: rgb($white) ;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    color: #{$white-5};
+    border-color: #{$white-1};
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='#{$white-5}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
+
+@media print {
+  .navbar {
+    display: none;
+  }
+}
+
+.navbar-form {
+  &.active .input-group-btn {
+    position: absolute;
+    inset-inline-end: 9px;
+    z-index: 9999;
+   inset-block-start: 4.3rem;;
+  }
+
+  &.nav-item.active .btn.btn-default.nav-link {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-form {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-form.active .btn.btn-default.nav-link.resp-btn {
+    display: none !important;
+  }
+}
+@media (min-width: 992px){
+  .navbar-expand-lg.responsive-navbar .navbar-collapse {
+      display: flex !important;
+      -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+      background: transparent;
+  }
+}
+
+#verticallpill .nav-pills .nav-link{
+  padding-block: 0.75rem;
+  padding-inline-start: 0;
+  padding-inline-end: 0.75rem;
+}

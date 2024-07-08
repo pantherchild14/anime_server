@@ -1,0 +1,292 @@
+/* ######## FONT ######## */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --background: rgba(255,255,255,0.1);
+    --color: #b0bbc7;
+    --color2: rgba(255, 255, 255, 0.75);
+    --primary-rgb: 77, 238, 234;
+    --background-rgb: 18, 55, 61;
+    --main-gradient-bg: radial-gradient(circle, rgb(var(--background-rgb)) 0%, #121923,#121923 100%);
+    --primary-bg-color: rgb(var(--primary-rgb));
+    --primary-bg-hover: rgb(var(--primary-rgb));
+    --primary-bg-border: rgb(var(--primary-rgb));
+    --primary01: rgba(var(--primary-rgb), 0.1);
+    --primary02: rgba(var(--primary-rgb), 0.2);
+    --primary03: rgba(var(--primary-rgb), 0.3);
+    --primary04: rgba(var(--primary-rgb), 0.4);
+    --primary05: rgba(var(--primary-rgb), 0.5);
+    --primary06: rgba(var(--primary-rgb), 0.6);
+    --primary07: rgba(var(--primary-rgb), 0.7);
+    --primary08: rgba(var(--primary-rgb), 0.8);
+    --primary09: rgba(var(--primary-rgb), 0.9);
+    --primary005: rgba(var(--primary-rgb), 0.05);
+    --primary-transparentcolor: rgba(var(--primary-rgb), 0.2);
+    --secondary-rgb: 249, 248, 113;
+    --secondary: rgb(var(--secondary-rgb));
+    --secondary-02: rgba(var(--secondary-rgb), 0.2);
+    --secondary-03: rgba(var(--secondary-rgb), 0.3);
+    --secondary-05: rgba(var(--secondary-rgb), 0.5);
+    --secondary-09: rgba(var(--secondary-rgb), 0.9);
+    --dark-body: #161b25;
+    --dark-theme: #1e232d;
+    --app-color-picker: #4deeea;
+    --dark: #191f2b;
+    --black:#fff;
+    --yellow: #ffc102;
+    --muted: #9aa5b9;
+    --light: #17171c;
+    --gray-100: #110f0f;
+    --gray-200: #17171c;
+    --gray-300: #393946;
+    --gray-400: #505062;
+    --gray-500: #73738c;
+    --gray-600: #8f8fa3;
+    --gray-700: #ababba;
+    --gray-800: #c7c7d1;
+    --gray-900: #e3e3e8;
+    --white-1: rgba(0, 0, 0, 0.1);
+    --white-2: rgba(0, 0, 0, 0.2);
+    --white-3: rgba(0, 0, 0, 0.3);
+    --white-4: rgba(0, 0, 0, 0.4);
+    --white-5: rgba(0, 0, 0, 0.5);
+    --white-6: rgba(0, 0, 0, 0.6);
+    --white-7: rgba(0, 0, 0, 0.7);
+    --white-8: rgba(0, 0, 0, 0.8);
+    --white-9: rgba(0, 0, 0, 0.9);
+    --white-05: rgba(0, 0, 0, 0.05);
+    --white-08: rgba(0, 0, 0, 0.08);
+    --white-75: rgba(0, 0, 0, 0.075);
+    --black-1: rgba(255, 255, 255, 0.1);
+    --black-2: rgba(255, 255, 255, 0.2);
+    --black-3: rgba(255, 255, 255, 0.3);
+    --black-4: rgba(255, 255, 255, 0.4);
+    --black-5: rgba(255, 255, 255, 0.5);
+    --black-6: rgba(255, 255, 255, 0.6);
+    --black-7: rgba(255, 255, 255, 0.7);
+    --black-8: rgba(255, 255, 255, 0.8);
+    --black-9: rgba(255, 255, 255, 0.9);
+    --black-03: rgba(255, 255, 255, 0.03);
+    --black-05: rgba(255, 255, 255, 0.05);
+    --shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(0,0,0, 0.1);
+    --card-background: rgba(255,255,255,0.10);
+    --border: rgba(var(--primary-rgb), 0.1);
+    --float-start: left;
+    --float-end: right;
+    --form-border: rgba(255, 255, 255, 0.1);
+    --bg-hover: rgba(0,0,0,0.2);
+    --bg-white: rgba(0,0,0,0.2);
+    --bg-active2: #17171c;
+    // --header-bg: transparent;
+    --header-color:rgba(255, 255, 255, 0.5);
+    --header-border:rgba(255, 255, 255, 0.1);
+    --input-bg:rgba(0,0,0,0.2);
+    // --menu-bg: transparent;
+    --menu-color:rgba(255, 255, 255, 0.5);
+    --menu-border:rgba(255, 255, 255, 0.1);
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 992px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/******variables Declaration******/
+
+$background: var(--background);
+$card-bg: var(--card-bg);
+$background-gradient-color: var(--background-rgb);
+$default-color: var(--color);
+$color: var(--color2);
+$primary: var(--primary-bg-color);
+$primary-hover: var(--primary-bg-hover);
+$primary-border: var(--primary-bg-border);
+$primary-transparent: var(--primary-transparentcolor);
+$primary-01: var(--primary01);
+$primary-02: var(--primary02);
+$primary-03: var(--primary03);
+$primary-05: var(--primary05);
+$primary-06: var(--primary06);
+$primary-09: var(--primary09);
+$primary-005: var(--primary005);
+$darkprimary-transparent: var(--darkprimary-transparentcolor);
+$transparentprimary-transparent: var(--transparentprimary-transparentcolor); 
+$card-background: var(--card-background);
+$secondary-rgb:var(--secondary-rgb);
+$secondary: var(--secondary);
+$secondary-02: var(--secondary-02);
+$secondary-03: var(--secondary-03);
+$secondary-05: var(--secondary-05);
+$secondary-09: var(--secondary-09);
+$success: #43ce85;
+$danger: #d6573c;
+$warning: #ffcf86;
+$info: #4ec2f0;
+$pink: #f754fa;
+$green: #2dce89;
+$teal: #4ac9bd;
+$purple: #7891ef;
+$orange: #ffb67b;
+$indigo: #5b67c7;
+$dark: var(--dark);
+$white: var(--background-rgb);  
+$black: var(--black);
+$yellow: var(--yellow);
+$muted: var(--muted);
+$light: var(--light);
+$dark-theme: var(--dark-theme);
+
+$fixed-white: #fff;
+$fixed-black: #000;
+$warning-03: #00bec9;
+
+/*gradient variables*/
+$primary-gradient: linear-gradient(to right, $primary 0%, $success 100%);
+$secondary-gradient: linear-gradient(to right, $secondary 0%, #{$secondary-05} 100%);
+$success-gradient: linear-gradient(to right, $success 0%, rgba($success,0.5) 100%);
+$warning-gradient: linear-gradient(to right, $warning 0%, rgba($warning,0.5) 100%);
+$pink-gradient: linear-gradient(to right, $pink 0%, rgba($pink,0.5) 100%);
+$teal-gradient: linear-gradient(to right, $teal 0%, rgba($teal,0.5) 100%);
+$danger-gradient: linear-gradient(to right, $danger 0%, rgba($danger,0.5) 100%);
+$info-gradient: linear-gradient(to right, $info 0%, rgba($info,0.5) 100%);
+$orange-gradient: linear-gradient(to right, $orange 0%, rgba($orange,0.5) 100%);
+$purple-gradient: linear-gradient(to right, $purple 0%, rgba($purple,0.5) 100%);
+$secondary-transparent: #{$secondary-02};
+$main-gradient-bg: var(--main-gradient-bg);
+$dropdown-gradient-bg: linear-gradient(to right, rgb($background-gradient-color) 0%, #121923,#121923 100%);
+
+
+/*gray variables*/
+$gray-100: var(--gray-100);
+$gray-200: var(--gray-200);
+$gray-300: var(--gray-300);
+$gray-400: var(--gray-400);
+$gray-500: var(--gray-500);
+$gray-600: var(--gray-600);
+$gray-700: var(--gray-700);
+$gray-800: var(--gray-800);
+$gray-900: var(--gray-900);
+
+/*shadow variables*/
+$shadow: var(--shadow);
+$shadow-color: var(--shadow-color);
+$border: var(--border);
+$form-border: var(--form-border);
+$bg-hover: var(--bg-hover);
+$bg-white: var(--bg-white);
+$bg-active: var(--primary02);
+$bg-active2: var(--bg-active2);
+
+/*float variables*/
+
+$float-start: var(--float-start);
+$float-end: var(--float-end);
+
+/*white variables*/
+$white-1: var(--white-1);
+$white-2: var(--white-2);
+$white-3: var(--white-3);
+$white-4: var(--white-4);
+$white-5: var(--white-5);
+$white-6: var(--white-6);
+$white-7: var(--white-7);
+$white-8: var(--white-8);
+$white-9: var(--white-9);
+$white-05: var(--white-05);
+$white-08: var(--white-08);
+$white-75: var(--white-75);
+
+/*black variables*/
+$black-1: var(--black-1);
+$black-2: var(--black-2);
+$black-3: var(--black-3);
+$black-4: var(--black-4);
+$black-5: var(--black-5);
+$black-6: var(--black-6);
+$black-7: var(--black-7);
+$black-8: var(--black-8);
+$black-9: var(--black-9);
+$black-03: var(--black-03);
+$black-05: var(--black-05);
+
+/*header variables*/
+$header-bg: var(--header-bg);
+$header-color:var(--header-color);
+$input-bg:var(--input-bg);
+$header-border:var(--header-border);
+
+/*menu variables*/
+$menu-bg: var(--menu-bg);
+$menu-color:var(--menu-color);
+$menu-border:var(--menu-border);
+
+[dir="rtl"] {
+    --float-start: right;
+    --float-end: left;
+}
+
+[data-theme-color="light"],[data-theme-color="glassy"] {
+    --main-gradient-bg: linear-gradient(72deg, #DADDE2, #ffffff 25% 40%, #ffffff 40% 80%, #DADDE2);
+    --background-rgb: 241, 241, 241;
+    --primary-rgb: 78, 98, 177;
+    --color: #5d6162;
+    --color2: #7b8191;
+    --muted: #7987a1;
+    --border: rgba(0, 0, 0, 0.05);
+    --form-border: #cdd4e2;
+    --gray-100: #f9fafb;
+    --gray-200: #f2f4f5;
+    --gray-300: #e6eaeb;
+    --gray-400: #dbdfe1;
+    --gray-500: #949eb7;
+    --gray-600: #7987a1;
+    --gray-700: #4d5875;
+    --gray-800: #383853;
+    --gray-900: #323251;
+    --white-1: rgba(255, 255, 255, 0.1);
+    --white-2: rgba(255, 255, 255, 0.2);
+    --white-3: rgba(255, 255, 255, 0.3);
+    --white-4: rgba(255, 255, 255, 0.4);
+    --white-5: rgba(255, 255, 255, 0.5);
+    --white-6: rgba(255, 255, 255, 0.6);
+    --white-7: rgba(255, 255, 255, 0.7);
+    --white-8: rgba(255, 255, 255, 0.8);
+    --white-9: rgba(255, 255, 255, 0.9);
+    --white-05: rgba(255, 255, 255, 0.05);
+    --white-08: rgba(255, 255, 255, 0.08);
+    --white-75: rgba(255, 255, 255, 0.075);
+    --black: rgba(0, 0, 0, 1);
+    --black-1: rgba(0, 0, 0, 0.1);
+    --black-2: rgba(0, 0, 0, 0.2);
+    --black-3: rgba(0, 0, 0, 0.3);
+    --black-4: rgba(0, 0, 0, 0.4);
+    --black-5: rgba(0, 0, 0, 0.5);
+    --black-6: rgba(0, 0, 0, 0.6);
+    --black-7: rgba(0, 0, 0, 0.7);
+    --black-8: rgba(0, 0, 0, 0.8);
+    --black-9: rgba(0, 0, 0, 0.9);
+    --black-03: rgba(0, 0, 0, 0.03);
+    --black-05: rgba(0, 0, 0, 0.05);
+    --bg-hover: #f3f3f3;
+    --dark-theme: #fff;
+    --header-bg: #f1f1f1;
+    --menu-bg: #f1f1f1;
+    --bg-white: #f9f9f9;
+    --secondary-rgb: 187, 186, 66;
+}
+
+[data-theme-color="dark"] {
+    --main-gradient-bg: linear-gradient(rgb(var(--background-rgb)) 0%, #121923,#121923 100%);
+    --background-rgb: 20, 20, 20;
+    --color: #dde5ed;
+    --color2: rgba(255, 255, 255, 0.5);
+    --muted: #bcc3d1;
+    --border: rgba(255, 255, 255, 0.1);
+    --header-bg: #1e232d;
+    --menu--bg: #1e232d;
+}

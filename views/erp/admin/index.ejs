@@ -1,0 +1,124 @@
+<section class="wrapper-admin">
+  <div class="main-header-left">
+    <div class="main-header-center ms-4 d-sm-none d-md-none d-lg-block form-group"
+      style="display: flex !important; justify-content: flex-end;">
+      <label for="search-title" style="align-self: center; margin: 0 10px 0 0px;">Search :</label>
+      <input id="searchInput" class="form-control" placeholder="Search..." type="search" />
+      <button id="searchButton" class="btn br-te-4 br-be-4"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+  <div class="block_area block_area-anime none-bg">
+    <div class="row" id="animeList">
+      <% listDetailAnime.forEach(function(item) { %>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="http://localhost:3000/images/<%= item.poster %>" class="card-img-top" alt="<%= item.title %>"
+              style="height:370px; width:100%">
+            <div class="card-body">
+              <h5 class="card-title">
+                <%= item.title %>
+              </h5>
+              <div class="btn btn-primary">
+                <a href="/admin/<%= item.paramHref %>">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+    </div>
+  </div>
+</section>
+<script>
+  $(document).ready(function () {
+    let searchClicked = false;
+    $("#searchButton").click(function () {
+      var keyword = $("#searchInput").val();
+      if (keyword !== "") {
+        searchClicked = true;
+        console.log(keyword);
+      }
+      $.ajax({
+        url: "/admin",
+        method: "GET",
+        data: {
+          keyword: keyword
+        },
+        success: function (data) {
+          $("#animeList").empty();
+
+          if (data.dataSearch && data.dataSearch.length > 0) {
+            data.dataSearch.forEach(function (video, index) {
+              let existsInListDetailAnime = data.listDetailAnime.some(function (anime) {
+                return anime.title === video.title;
+              });
+              const slugify = (str) => str.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
+              if (existsInListDetailAnime) {
+                var card = `
+              <div class="col">
+                <div class="card" style="width: 18rem;">
+                  <img src="${video.image}" class="card-img-top" alt="${video.title}" style="height:370px; width:100%">
+                  <div class="card-body">
+                    <h5 class="card-title">${video.title}</h5>
+                    <div class="btn btn-primary"><a href="/admin/${slugify(video.title)} ">View</a></div>
+                  </div>
+                </div>
+              </div>
+            `;
+                $("#animeList").append(card);
+              } else {
+                var card = `
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="${video.image}" class="card-img-top" alt="${video.title}" style="height:370px; width:100%">
+                <div class="card-body">
+                  <h5 class="card-title">${video.title}</h5>
+                  <p id="crawlButton_${index}" class="btn btn-primary">Cào dữ liệu</p>
+                </div>
+              </div>
+            </div>
+          `;
+                $("#animeList").append(card);
+                $(`#crawlButton_${index}`).click(function () {
+                  crawlAnimeDetail(video.href, index);
+                });
+              }
+            });
+          } else {
+            $("#animeList").html("<p>No data available</p>");
+          }
+        },
+        error: function (error) {
+          console.error(error);
+        }
+      });
+    });
+
+    function crawlAnimeDetail(link, id) {
+      $.ajax({
+        url: "/admin",
+        method: "post",
+        data: {
+          url: link
+        },
+        success: function (response) {
+          $(`#crawlButton_${id}`).empty();
+          $(`#crawlButton_${id}`).after(`
+      <div class="alert alert-success" role="alert">
+        Cào dữ liệu thành công!
+      </div>`);
+        },
+        error: function (error) {
+          console.log(error);
+        }
+      });
+    }
+
+    $("#searchInput").on("input", function () {
+      if (!searchClicked) {
+        // window.location.reload();
+      }
+      searchClicked = false;
+    });
+
+  });
+</script>

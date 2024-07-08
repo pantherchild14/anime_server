@@ -1,0 +1,294 @@
+.tooltip {
+  inset-block-start: 0;
+}
+
+.tooltip-inner {
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.tooltip-primary {
+  .tooltip-inner {
+    background-color: #{$primary} !important;
+    color: rgb($white) !important;
+  }
+
+  &.bs-tooltip-top .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-block-start-color: #{$primary} !important;
+  }
+
+  &.bs-tooltip-bottom .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-block-end-color: #{$primary} !important;
+  }
+
+  &.bs-tooltip-start .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-inline-start-color: #{$primary} !important;
+  }
+
+  &.bs-tooltip-end .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-inline-end-color: #{$primary} !important;
+  }
+}
+
+.tooltip-primary1 {
+  .tooltip-inner {
+    background-color: #{$success} !important;
+    color: rgb($white) !important;
+  }
+
+  &.bs-tooltip-top .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-block-start-color: #{$success} !important;
+  }
+
+  &.bs-tooltip-bottom .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-block-end-color: #{$success} !important;
+  }
+
+  &.bs-tooltip-start .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-inline-start-color: #{$success} !important;
+  }
+
+  &.bs-tooltip-end .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-inline-end-color: #{$success} !important;
+  }
+}
+
+.tooltip-secondary {
+  .tooltip-inner {
+    background-color: #{$secondary} !important;
+    color: #{$dark} !important;
+  }
+
+  &.bs-tooltip-top .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-block-start-color: #{$secondary} !important;
+  }
+
+  &.bs-tooltip-bottom .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-block-end-color: #{$secondary} !important;
+  }
+
+  &.bs-tooltip-start .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-inline-start-color: #{$secondary} !important;
+  }
+
+  &.bs-tooltip-end .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-inline-end-color: #{$secondary} !important;
+  }
+}
+
+.tooltip-secondary1 {
+  .tooltip-inner {
+    background-color: #{$danger} !important;
+    color: rgb($white) !important;
+  }
+
+  &.bs-tooltip-top .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-block-start-color: #{$danger} !important;
+  }
+
+  &.bs-tooltip-bottom .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-block-end-color: #{$danger} !important;
+  }
+
+  &.bs-tooltip-start .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-inline-start-color: #{$danger} !important;
+  }
+
+  &.bs-tooltip-end .tooltip-arrow::before,
+  &.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-inline-end-color: #{$danger} !important;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 9999;
+  display: block;
+  margin: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: start;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  white-space: normal;
+  line-break: auto;
+  font-size: 0.76562rem;
+  word-wrap: break-word;
+  opacity: 0;
+
+  &.show {
+    opacity: 0.9;
+  }
+
+  .tooltip-arrow {
+    position: absolute;
+    display: block;
+    width: 0.8rem;
+    height: 0.4rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      border-color: transparent;
+      border-style: solid;
+    }
+  }
+}
+
+.bs-tooltip-top,
+.bs-tooltip-auto[data-popper-placement^="top"] {
+  padding: 0.4rem 0;
+}
+
+.bs-tooltip-top .tooltip-arrow,
+.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow {
+  inset-block-end: 0;
+}
+
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+  inset-block-start: 0;
+  border-width: 0.4rem 0.4rem 0;
+  border-block-start-color: rgb($background-gradient-color);
+}
+
+.bs-tooltip-end .tooltip-arrow,
+.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow {
+  width: 0.4rem;
+  height: 0.8rem;
+}
+
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+  inset-inline-end: 6px;
+  border-block-start-width: 0.4rem;
+  border-inline-end-width: 0.4rem;
+  border-block-end-width: 0.4rem;
+  border-inline-start-width: 0px;
+  border-inline-end-color: rgb($background-gradient-color);
+}
+
+.bs-tooltip-bottom,
+.bs-tooltip-auto[data-popper-placement^="bottom"] {
+  padding: 0.4rem 0;
+}
+
+.bs-tooltip-bottom .tooltip-arrow,
+.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow {
+  inset-block-start: 0;
+}
+
+.bs-tooltip-bottom .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+  inset-block-end: 0;
+  border-width: 0 0.4rem 0.4rem;
+  border-block-end-color: rgb($background-gradient-color);
+}
+
+.bs-tooltip-start .tooltip-arrow,
+.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow {
+  width: 0.4rem;
+  height: 0.8rem;
+}
+
+.bs-tooltip-start .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+  inset-inline-start: 6px;
+  border-block-start-width: 0.4rem;
+  border-inline-end-width: 0;
+  border-block-end-width: 0.4rem;
+  border-inline-start-width: 0.4rem;
+  border-inline-start-color: rgb($background-gradient-color);
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 0.25rem 0.5rem;
+  color: #{$fixed-white};
+  text-align: center;
+  background-color: rgb($background-gradient-color);
+  border-radius: 3px;
+}
+
+.tooltip-static-demo {
+  text-align: center;
+  background-color: #{$bg-hover};
+  padding: 20px;
+
+  .tooltip {
+    z-index: 0;
+    opacity: 1;
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .bs-tooltip-top .tooltip-arrow,
+  .bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow,
+  .bs-tooltip-bottom .tooltip-arrow,
+  .bs-tooltip-auto[data-popper-placement^="bottom"] {
+    inset-inline-start: 50%;
+    margin-inline-start: -2px;
+  }
+
+  .bs-tooltip-start,
+  .bs-tooltip-auto[data-popper-placement^="left"],
+  .bs-tooltip-end,
+  .bs-tooltip-auto[data-popper-placement^="right"] {
+    margin-block-start: 5px;
+  }
+
+  .tooltip-primary1.bs-tooltip-start .tooltip-arrow,
+  .bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow,
+  .bs-tooltip-end .tooltip-arrow,
+  .bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow {
+    inset-block-start: 50%;
+    margin-block-start: -6px;
+  }
+
+  .bs-tooltip-start .tooltip-arrow,
+  .bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow,
+  .bs-tooltip-end .tooltip-arrow,
+  .bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow {
+    inset-block-start: 50%;
+    margin-block-start: -6px;
+  }
+}
+
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow,
+.bs-tooltip-end .tooltip-arrow {
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+}
+
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow,
+.bs-tooltip-start .tooltip-arrow {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before, .bs-tooltip-end .tooltip-arrow::before {
+  right: 6px;
+}

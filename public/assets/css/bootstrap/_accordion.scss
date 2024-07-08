@@ -1,0 +1,119 @@
+.accordion{
+
+	>.accordion-item{
+		border-color: #{$border};
+		overflow: hidden;
+		background-color: transparent;
+
+		>.accordion-header > a{
+			display: block;
+			position: relative;
+			padding: 12px;
+			color: #{$default-color};
+			transition: all ease 0.3s;
+
+			&:not(.collapsed){
+				>.accordion-controls >.shrink{
+					display: block;
+				}
+				>.accordion-controls >.expand{
+					display: none;
+				}
+			}
+
+			&.collapsed{
+				>.accordion-controls >.shrink{
+					display: none;
+				}
+				>.accordion-controls >.expand{
+					display: block;
+				}
+			}
+
+			>.accordion-controls{
+				position: absolute;
+				inset-inline-end: 12px;
+			}
+		}
+		
+		>.accordion-collapse{
+			border-block-start: 1px solid #{$border};
+		}
+	}
+	
+	&.custom-accordion{
+		>.accordion-item + .accordion-item{
+			margin-block-start: 10px;
+		}
+		>.accordion-item{
+			border-radius: 4px;
+
+			&:not(:first-of-type){
+				border-block-start: 1px solid #{$border};
+			}
+			>.accordion-header > a{
+				&:not(.collapsed){
+					background-color: #{$primary};
+					color: #{$fixed-black} ;
+				}
+				&.collapsed:hover{
+					background-color: #{$bg-hover};
+					color: #{$primary};
+				}
+			}
+		}
+	}
+
+	&.accordion-style1{
+		>.accordion-item + .accordion-item{
+			margin-block-start: 10px;
+		}
+		>.accordion-item{
+			border-radius: 4px;
+
+			&:not(:first-of-type){
+				border-block-start: 1px solid #{$border};
+			}
+
+			>.accordion-header > a{
+				&:not(.collapsed){
+					background-color: #{$primary};
+					color: #{$fixed-black} ;
+				}
+				&.collapsed:hover{
+					background-color: #{$bg-hover};
+					color: #{$primary};
+				}
+			}
+		}
+	}
+	
+	&.accordion-style2{
+		>.accordion-item{
+			border-radius: 0px;
+			border: none;
+
+			&:not(:last-child){
+				border-block-end: 1px dashed #{$border};
+			}
+
+			>.accordion-collapse{
+				border-block-start: none !important;
+			}
+
+			>.accordion-header > a{
+
+				&:not(.collapsed){
+					color: #{$primary};
+				}
+				&.collapsed:hover{
+					color: #{$primary};
+				}
+			}
+
+			>.accordion-collapse >.accordion-body{
+				padding-block-start: 0px;
+			}
+		}
+	}
+}

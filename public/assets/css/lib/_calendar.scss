@@ -1,0 +1,72 @@
+.fc .fc-button-primary {
+	color: #{$fixed-black};
+	background-color: #{$primary} ;
+	border-color: #{$primary} ;
+	
+}
+.fc .fc-scrollgrid.fc-scrollgrid-liquid thead {
+	background-color: #{$black-03};
+}
+.fc .fc-day-today .fc-daygrid-day-number {
+	font-weight: bold;
+	color: #{$primary};
+}
+.fc .fc-daygrid-day.fc-day-today {
+	background-color: #{$gray-100};
+}
+.fc .fc-button-primary:hover {
+	color: #{$fixed-black};
+	background-color: #{$primary-hover};
+	border-color: #{$primary-border} ;
+}
+.fc .fc-button-primary:disabled {
+	/* not DRY */
+	color: #{$fixed-black};
+	background-color: #{$primary} ;
+	border-color: #{$primary} ;
+}
+.fc .fc-button-primary:not(:disabled):active, .fc .fc-button-primary:not(:disabled).fc-button-active {
+	color: #{$fixed-black};
+	background-color:  #{$primary};
+	border-color:  #{$primary};
+	opacity: 0.5;
+}
+.fc-daygrid-event.fc-event{
+	background: #{$primary};
+	color: #{$fixed-black} !important;
+}
+.fc .fc-list-event-dot {
+	display: inline-block;
+	box-sizing: content-box;
+	width: 0;
+	height: 0;
+	border: 5px solid #{$primary} ;
+	border-radius: 4px;
+}
+.fc-v-event {
+	/* allowed to be top-level */
+	display: block;
+	border: 1px solid #{$primary} ;
+	background-color: #{$primary} ;
+}
+.fc-daygrid-event-dot {
+	/* the actual dot */
+	display: none;
+	margin: 4px;
+	box-sizing: content-box;
+	width: 0;
+	height: 0;
+	border: 4px solid #{$primary} ;
+	border-radius: 4px;
+}
+.fc-h-event {
+	/* allowed to be top-level */
+	display: block;
+	border: 1px solid #{$primary} ;
+	border: 1px solid #{$primary} ;
+	background-color: #{$primary} ;
+	background-color: #{$primary} 
+}
+.fc-scrollgrid-sync-table{
+	border-color: #{$border} ;
+}

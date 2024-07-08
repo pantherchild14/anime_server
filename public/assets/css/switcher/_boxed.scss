@@ -1,0 +1,74 @@
+[data-width="boxed"] {
+    @media (min-width: 1400px) {
+        body {
+            background: rgb($background-gradient-color);
+
+            .page {
+                width: 1600px;
+                margin: 0 auto;
+                background: $main-gradient-bg;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: 100vh;
+                box-shadow: #{$shadow-color} 0px 5px 0px 0px, #{$shadow-color} 0px 5px 25px 0px;
+            }
+
+            .sticky-pin .horizontal-main {
+                max-width: 1600px;
+                margin: 0;
+            }
+
+            .main-header {
+                max-width: 1600px;
+                margin: 0 auto;
+                inset-inline-start: 0;
+                inset-inline-end: 0;
+                inset-block-start: 0;
+            }
+
+            .main-content .container,
+            .main-header > .container,
+            .horizontal-mainwrapper.container {
+                padding-inline-end: 0.75rem;
+                padding-inline-start: 0.75rem;
+            }
+
+            .horizontalMenu > .horizontalMenu-list > li > a {
+                padding: 15px 11px;
+            }
+
+            .app-sidebar {
+                inset-inline-start: auto !important;
+            }
+
+            .main-content-left-chat .main-nav-line-chat .nav-link + .nav-link {
+                margin-inline-start: 0;
+            }
+
+            .main-nav-line-chat {
+                padding: 0 17px;
+            }
+
+            .app-sidebar .main-sidebar-header {
+                inset-inline-start: auto;
+                inset-inline-end: auto;
+            }
+        }
+        .slide .side-menu__item.active::before,
+        .slide .side-menu__item:hover::before,
+        .slide .side-menu__item:focus::before {
+            width: 0px;
+            inset-inline-start: -5px;
+        }
+
+        &[data-layout="horizontal"] {
+            .hor-header .container,
+            .horizontal-main .container,
+            .main-content.horizontal-content .container {
+                max-width: 95% !important;
+            }
+        }
+    }
+}

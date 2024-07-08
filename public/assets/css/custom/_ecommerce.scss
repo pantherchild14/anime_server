@@ -1,0 +1,340 @@
+.pro-img-box {
+  position: relative;
+}
+
+.product-pagination {
+  .page-link {
+    background-color: #{$gray-100};
+    border: 1px solid #{$border};
+  }
+
+  .page-item.disabled .page-link {
+    border-color: #{$border};
+  }
+}
+
+.order-table .product-item {
+
+  .product-thumb,
+  .product-info {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+
+.shopping-cart-footer {
+  display: table;
+  width: 100%;
+  border-block-start: 1px solid #{$border};
+
+  >.column {
+    display: table-cell;
+    padding: 0;
+    vertical-align: middle;
+
+    &:last-child {
+      text-align: end;
+
+      .btn {
+        margin-inline-end: 0;
+        margin-inline-start: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .shopping-cart-footer>.column {
+    display: block;
+    width: 100%;
+
+    &:last-child {
+      text-align: center;
+    }
+
+    .btn {
+      width: 100%;
+      margin: 12px 0 !important;
+    }
+  }
+}
+
+.product-details tr>td {
+  vertical-align: middle !important;
+}
+
+.product-details {
+  >table thead th {
+    padding-block-start: 17px;
+    padding-block-end: 17px;
+    border-width: 1px;
+    text-align: center;
+  }
+
+  .media {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .shopping-cart-footer>.column {
+    display: flow-root;
+  }
+}
+
+@media (min-width: 768px) {
+  #checkoutsteps .checkoutline {
+    height: 3px;
+    background-color: #{$bg-hover};
+    -webkit-transform: translateY(1.7rem);
+    transform: translateY(1.7rem);
+    margin: 0 11%;
+    position: relative;
+    z-index: 0;
+    inset-block-start: 28px;
+  }
+}
+
+#checkoutsteps ul {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+#checkoutsteps ul[role="tablist"] li {
+  // display: flex;
+  z-index: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  flex-basis: auto;
+  font-weight: 500;
+  // font-size: 1.1rem;
+}
+
+#checkoutsteps>.steps a {
+  display: block;
+  width: auto;
+  background-color: transparent;
+  // color: #{$color};
+  font-size: 16px;
+  font-weight: 400;
+  padding: 14px 0;
+  text-decoration: none;
+  border-radius: 30px;
+  cursor: default;
+  text-align: center;
+  outline: none;
+}
+
+.wizard>.steps>ul li .current-info {
+  display: none;
+}
+
+#checkoutsteps>.steps .current a .number {
+  background: #{$primary};
+  color: rgb($white);
+}
+
+#checkoutsteps .item .thumb {
+  display: inline-flex;
+  width: 100px;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+}
+
+#checkoutsteps .item .left {
+  display: flex;
+  align-items: center;
+}
+
+#checkoutsteps .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block-end: 30px;
+  border-block-end: 1px solid #{$border};
+  margin-block-end: 30px;
+}
+
+#checkoutsteps .item .purchase {
+  text-decoration: none;
+}
+
+#checkoutsteps .item .purchase {
+  display: inline-block;
+  margin-inline-start: 21px;
+}
+
+#checkoutsteps .total {
+  float: $float-end;
+  color: #{$primary};
+}
+
+#checkoutsteps>.steps {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  padding: 0;
+}
+
+#checkoutsteps.wizard {
+  border-radius: 4px;
+}
+
+.wizard>.content>.title {
+  font-size: 18px;
+  color: #{$color};
+  font-weight: 700;
+  margin-block-end: 5px;
+  display: none;
+}
+
+.wizard>.content>.body {
+  float: none;
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+.wizard>.content>.title.current {
+  display: none !important;
+}
+
+.card-pay .tabs-menu.nav li {
+  border-inline-end: 1px solid #{$border};
+}
+
+.card-pay .tabs-menu li {
+  width: 33.3%;
+  display: block;
+}
+
+.card-pay .tabs-menu li a.active {
+  background: #{$primary};
+  color: rgb($white);
+}
+
+.card-pay .tabs-menu li a {
+  padding: 0.7rem 1rem;
+  display: block;
+  text-align: center;
+}
+
+.card-pay .tabs-menu.nav {
+  background: #{$bg-hover}
+}
+
+.card-pay .tabs-menu {
+  margin-block-end: 25px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  #checkoutsteps>.steps .number {
+    background-color: #{$bg-hover};
+    color: #{$color};
+    font-size: 17px;
+    font-weight: 400;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  #checkoutsteps>.steps .number {
+    background-color: #{$bg-hover};
+    color: #{$color};
+    font-size: 15px;
+    font-weight: 600;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  #checkoutsteps>.steps a {
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  #checkoutsteps .checkoutline {
+    height: 3px;
+    background-color: #{$bg-hover};
+    -webkit-transform: translateY(1.7rem);
+    transform: translateY(1.7rem);
+    margin: 0 11%;
+    position: relative;
+    z-index: 0;
+    inset-block-start: 20px;
+  }
+}
+
+.cart-img {
+  height: 55px !important;
+  width: 55px;
+  border-radius: 4px !important;
+}
+
+@media (max-width: 340px) {
+  #checkoutsteps .item {
+    padding-block-end: 0;
+  }
+
+  #checkoutsteps .item .purchase {
+    margin-inline-start: 0;
+    margin-block-end: 10px;
+    margin-block-start: 10px;
+  }
+
+  #checkoutsteps .item .d-flex {
+    display: block !important;
+
+    .thumb {
+      border: 0;
+    }
+
+    .handle-counter {
+      margin-inline-start: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Project        :   ZEM - HTML5 Bootstrap Admin Template
+Version        :   V.1
+Copyright      :   Spruko Technologies Private Limited 
+Author         :   SPRUKO
+Author URL     :   https://themeforest.net/user/spruko
+Support	       :   support@spruko.com
+License        :   Licensed under ThemeForest License
+
+-------------------------------------------------------------------*/
+
+@import "variables";
+
+/* BOOTSTRAP */ 
+@import "./bootstrap";
+
+/* CUSTOM-STYLES */ 
+@import "./custom";
+
+/* LAYOUT-STYLES */
+@import "./layout";
+
+/* LIB-STYLES */
+@import "./lib";
+
+/* TEMP-STYLES */
+@import "./temp";
+
+/* UTILITIES-STYLES */ 
+@import "./util"; 
+
+/* Switcher-STYLES */
+@import "./switcher";
+
+
